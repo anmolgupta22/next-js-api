@@ -1,7 +1,5 @@
 import React from "react";
-
-//import "../../styles/index.module.css"
-
+//import style from "../../styles/map1.css"
 const Map2 = () => {
   function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
@@ -55,22 +53,28 @@ const Map2 = () => {
   }
 
   return (
-    <html>
-      <head>
-        <title>  Geocoding </title>{" "}
+    <html >
+      <head >
+        <title>  Geocoding </title>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default">
-          {" "}
-        </script>{" "}
-      </head>{" "}
-      <style> </style>
-       <br /> <br /> 
-       <br /> <br />
-      <br /> <br /> 
-      <br /> <br />
-      <br /> <br /> 
-      <br /> <br />
-      <br /> <br />
-       <br /> <br />
+        </script>
+      </head>
+      <body style={{ height: "100%", margin: "0", padding: "0"}} >
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+
+
+    <div id="result"></div>
+
+    <div id="map"></div>
+
+    <br /><br />
+
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwYjQh1luEQ7zTzpXnZSNJfG4RK-yVPbQ&callback=initMap&v=weekly&channel=2" async></script>
+</body>
       <div id="result"> </div> <div id="map"> </div> <br /> <br />
       <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwYjQh1luEQ7zTzpXnZSNJfG4RK-yVPbQ&callback=initMap&v=weekly&channel=2"

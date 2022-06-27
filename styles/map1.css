@@ -1,0 +1,37 @@
+ #map {
+     height: 40%;
+     width: 80%;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ 
+ #floating-panel {
+     position: absolute;
+     top: 10px;
+     margin-top: 200px;
+     left: 25%;
+     z-index: 5;
+     background-color: #fff;
+     padding: 5px;
+     border: 1px solid #999;
+     text-align: center;
+     font-family: "Roboto", "sans-serif";
+     line-height: 30px;
+     padding-left: 10px;
+ }
+ 
+ #floating-panel {
+     position: absolute;
+     top: 5px;
+     left: 50%;
+     margin-left: -180px;
+     width: 350px;
+     z-index: 5;
+     background-color: #fff;
+     padding: 5px;
+     border: 1px solid #999;
+ }
+ 
+ #latlng {
+     width: 225px;
+ }
