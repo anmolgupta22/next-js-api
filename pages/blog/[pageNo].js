@@ -8,7 +8,7 @@ export const getStaticPaths = async () => {
   const paths = data.map((curElem) => {
     return {
       params: {
-        pageNo: curElem.id.toString(),
+        pageno: curElem.id.toString(),
       },
     };
   });
@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (context) => {
-  const id = context.params.pageNo;
+  const id = context.params.pageno;
   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
   const data = await res.json();
   console.log("data", data);
@@ -38,12 +38,22 @@ const Data = ({ data }) => {
     <>
       <Navbar />
       <div className="ssr-styles ssr-styles-inside">
-        <h3> {id} </h3> <h2> {name} </h2> <h2> {username} </h2> <p> {email} </p>{" "}
-        <p> {address.street} </p> <p> {address.suite} </p>{" "}
-        <p> {address.city} </p> <p> {address.zipcode} </p> <Map2 />
-        <p> {address.geo.lat} </p> <p> {address.geo.lng} </p> <p> {phone} </p>{" "}
-        <p> {website} </p> <p> {company.name} </p>{" "}
-        <p> {company.catchPhrase} </p> <p> {company.bs} </p>{" "}
+        <h3> {id} </h3> 
+        <h2> {name} </h2> 
+        <h2> {username} </h2>
+         <p> {email} </p>{" "}
+        <p> {address.street} </p> 
+        <p> {address.suite} </p>{" "}
+        <p> {address.city} </p> 
+        <p> {address.zipcode} </p>
+       <Map2 />
+        <p> {address.geo.lat} </p>
+         <p> {address.geo.lng} </p>
+          <p> {phone} </p>{" "}
+        <p> {website} </p> <p>
+           {company.name} </p>{" "}
+        <p>{company.catchPhrase}</p>
+                    <p>{company.bs}</p>{" "}
       </div>{" "}
     </>
   );

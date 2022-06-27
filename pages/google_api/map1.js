@@ -1,5 +1,6 @@
 import React from "react";
-//import "../../styles/map.css";
+
+//import "../../styles/index.module.css"
 
 const Map2 = () => {
   function initMap() {
@@ -56,15 +57,20 @@ const Map2 = () => {
   return (
     <html>
       <head>
-        <title> Reverse Geocoding </title>{" "}
+        <title>  Geocoding </title>{" "}
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default">
           {" "}
         </script>{" "}
       </head>{" "}
-      <style> </style> <br /> <br /> <br /> <br />
-      <br /> <br /> <br /> <br />
-      <br /> <br /> <br /> <br />
-      <br /> <br /> <br /> <br />
+      <style> </style>
+       <br /> <br /> 
+       <br /> <br />
+      <br /> <br /> 
+      <br /> <br />
+      <br /> <br /> 
+      <br /> <br />
+      <br /> <br />
+       <br /> <br />
       <div id="result"> </div> <div id="map"> </div> <br /> <br />
       <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwYjQh1luEQ7zTzpXnZSNJfG4RK-yVPbQ&callback=initMap&v=weekly&channel=2"

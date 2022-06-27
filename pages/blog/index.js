@@ -15,17 +15,18 @@ export const getStaticProps = async () => {
 const blog = ({ data }) => {
   return (
     <>
-      <Navbar />{" "}
-      {data.slice(0, 10).map((curElem) => {
+      <Navbar />
+      {data.slice(0, 10).map((curElem) => 
+      {
         return (
           <div key={curElem.id} className="ssr-styles">
-            <h3> {curElem.id} </h3>{" "}
+            <h3>{curElem.id}</h3>
             <Link href={`/blog/${curElem.id}`}>
-              <h2> {curElem.name} </h2>{" "}
-            </Link>{" "}
+              <h2>{curElem.name}</h2>
+            </Link>
           </div>
         );
-      })}{" "}
+      })}
     </>
   );
 };
